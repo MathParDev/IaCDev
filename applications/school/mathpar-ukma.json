@@ -1,7 +1,7 @@
 {
   "environmentType": "production",
   "springProfiles": "production",
-  "imageName": "registry.gitlab.com/mathpar/mathpar/school",
+  "imageName": "registry.gitlab.com/mathpar/learning/school",
   "networkName": "mathpar-network",
   "networkAlias": "school-app",
   "containerName": "mathpar_school_app",

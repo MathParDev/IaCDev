@@ -1,7 +1,7 @@
 {
   "environmentType": "production",
   "springProfiles": "production",
-  "imageName": "registry.gitlab.com/mathpar/mathpar/authentication",
+  "imageName": "registry.gitlab.com/mathpar/learning/account",
   "networkName": "mathpar-network",
   "networkAlias": "authentication-app",
   "containerName": "mathpar_authentication_app",
