@@ -1,10 +1,28 @@
-networkName=$(jq -r ".networkName" < "$1")
-networkAlias=$(jq -r ".networkAlias" < "$1")
-containerName=$(jq -r ".containerName" < "$1")
-schemaName=$(jq -r ".schemaName" < "$1")
-VOLUME_BINDING=$(jq -r ".volumeBinding" < "$1")
+for i in "$@"
+do
+case $i in
+    properties=*)
+    propertiesFile="${i#*=}"
+    shift
+    ;;
+    password=*)
+    passwordString="${i#*=}"
+    shift
+    ;;
+    *)
+          # unknown option
+    ;;
+esac
+done
 
-ROOT_PASSWORD="$2"
+
+networkName=$(jq -r ".networkName" < "$propertiesFile")
+networkAlias=$(jq -r ".networkAlias" < "$propertiesFile")
+containerName=$(jq -r ".containerName" < "$propertiesFile")
+schemaName=$(jq -r ".schemaName" < "$propertiesFile")
+VOLUME_BINDING=$(jq -r ".volumeBinding" < "$propertiesFile")
+
+ROOT_PASSWORD="$passwordString"
 
 echo "docker stop $containerName || true"
 echo "docker rm $containerName || true"
