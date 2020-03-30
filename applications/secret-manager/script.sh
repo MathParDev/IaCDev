@@ -1,12 +1,29 @@
-environment=$(jq -r ".environmentType" < "$1")
-profiles=$(jq -r ".springProfiles" < "$1")
-imageName=$(jq -r ".imageName" < "$1")
-networkName=$(jq -r ".networkName" < "$1")
-networkAlias=$(jq ".networkAlias" < "$1")
-containerName=$(jq -r ".containerName" < "$1")
-propertiesFolder=$(jq -r ".propertiesFolder" < "$1")
+for i in "$@"
+do
+case $i in
+    properties=*)
+    propertiesFile="${i#*=}"
+    shift # past argument=value
+    ;;
+    tag=*)
+    tag="${i#*=}"
+    shift # past argument=value
+    ;;
+    *)
+          # unknown option
+    ;;
+esac
+done
 
-fullImage="$imageName:$2"
+environment=$(jq -r ".environmentType" < "$propertiesFile")
+profiles=$(jq -r ".springProfiles" < "$propertiesFile")
+imageName=$(jq -r ".imageName" < "$propertiesFile")
+networkName=$(jq -r ".networkName" < "$propertiesFile")
+networkAlias=$(jq ".networkAlias" < "$propertiesFile")
+containerName=$(jq -r ".containerName" < "$propertiesFile")
+propertiesFolder=$(jq -r ".propertiesFolder" < "$propertiesFile")
+
+fullImage="$imageName:$tag"
 
 echo "docker pull $fullImage"
 echo "docker stop $containerName || true"
