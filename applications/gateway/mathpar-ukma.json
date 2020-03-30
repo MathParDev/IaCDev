@@ -1,0 +1,8 @@
+{
+  "environmentType": "production",
+  "springProfiles": "production",
+  "imageName": "registry.gitlab.com/mathpar/mathpar/frontend",
+  "networkName": "mathpar-network",
+  "containerName": "mathpar_frontend_app",
+  "secretmanagerUrl": "http://secret-manager:8080"
+}

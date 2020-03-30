@@ -1,0 +1,9 @@
+{
+  "environmentType": "production",
+  "springProfiles": "production",
+  "imageName": "registry.gitlab.com/mathpar/mathpar/secretmanager",
+  "networkName": "mathpar-network",
+  "networkAlias": "secret-manager",
+  "containerName": "mathpar_secretmanager_app",
+  "propertiesFolder": "/mathpar/properties"
+}

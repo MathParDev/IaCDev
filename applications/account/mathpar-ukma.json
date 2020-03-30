@@ -1,0 +1,9 @@
+{
+  "environmentType": "production",
+  "springProfiles": "production",
+  "imageName": "registry.gitlab.com/mathpar/mathpar/authentication",
+  "networkName": "mathpar-network",
+  "networkAlias": "authentication-app",
+  "containerName": "mathpar_authentication_app",
+  "secretmanagerUrl": "http://secret-manager:8080"
+}

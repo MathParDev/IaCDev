@@ -1,0 +1,6 @@
+{
+  "networkName": "mathpar-network",
+  "networkAlias": "school-db",
+  "containerName": "mathpar_school_db",
+  "schemaName": "school"
+}
