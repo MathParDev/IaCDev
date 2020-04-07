@@ -4,6 +4,6 @@
   "imageName": "registry.gitlab.com/mathpar/learning/account",
   "networkName": "mathpar-network",
   "networkAlias": "account-app",
-  "containerName": "mathpar_account_app",
+  "containerName": "account_app",
   "secretmanagerUrl": "http://secret-manager:8080"
 }

@@ -4,6 +4,6 @@
   "imageName": "registry.gitlab.com/mathpar/learning/secret-manager",
   "networkName": "mathpar-network",
   "networkAlias": "secret-manager",
-  "containerName": "mathpar_secretmanager_app",
+  "containerName": "secretmanager_app",
   "propertiesFolder": "/mathpar/properties"
 }

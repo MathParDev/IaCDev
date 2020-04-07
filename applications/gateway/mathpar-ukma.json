@@ -3,6 +3,6 @@
   "springProfiles": "production",
   "imageName": "registry.gitlab.com/mathpar/learning/gateway",
   "networkName": "mathpar-network",
-  "containerName": "mathpar_gateway_app",
+  "containerName": "gateway_app",
   "secretmanagerUrl": "http://secret-manager:8080"
 }

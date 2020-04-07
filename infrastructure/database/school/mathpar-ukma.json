@@ -1,7 +1,7 @@
 {
   "networkName": "mathpar-network",
   "networkAlias": "school-db",
-  "containerName": "mathpar_school_db",
+  "containerName": "school_db",
   "schemaName": "school",
   "volumeBinding": "/mathpar/persistent/school"
 }

@@ -1,7 +1,7 @@
 {
   "networkName": "mathpar-network",
   "networkAlias": "account-db",
-  "containerName": "mathpar_account_db",
+  "containerName": "account_db",
   "schemaName": "account",
   "volumeBinding": "/mathpar/persistent/account"
 }
