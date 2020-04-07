@@ -1,0 +1,9 @@
+{
+  "environmentType": "production",
+  "springProfiles": "production",
+  "imageName": "registry.gitlab.com/mathpar/learning/tasks",
+  "networkName": "mathpar-network",
+  "networkAlias": "tasks-app",
+  "containerName": "tasks_app",
+  "secretmanagerUrl": "http://secret-manager:8080"
+}

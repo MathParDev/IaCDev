@@ -1,0 +1,7 @@
+{
+  "networkName": "mathpar-network",
+  "networkAlias": "tasks-db",
+  "containerName": "tasks_db",
+  "schemaName": "tasks",
+  "volumeBinding": "/mathpar/persistent/tasks"
+}
